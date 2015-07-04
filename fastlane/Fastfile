@@ -62,6 +62,20 @@ platform :ios do
     # frameit
   end
 
+  lane :appstore do
+    produce({
+      produce_username: 'ben@octop.ad',
+      produce_app_identifier: 'ad.octop.FastlaneDeliverTestApp',
+      produce_app_name: 'FastlaneDeliverTestApp',
+      produce_language: 'English',
+      produce_version: '1.0',
+      produce_sku: 000,
+      produce_team_name: 'Log Dash G, LLC' # only necessary when in multiple teams
+    })
+
+    deliver
+  end
+
   # You can define as many lanes as you want
 
   after_all do |lane|
