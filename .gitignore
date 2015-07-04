@@ -7,4 +7,5 @@ xcuserdata
 
 # Fastlane
 report.xml
-
+*.ipa
+*.zip
